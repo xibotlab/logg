@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, scale=1.0">
+        <title>가입하기</title>
+
+        <!--폰트-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='signup/style.css') }}">
+    </head>
+    <body>
+        <div id="mainDiv">
+            <img src="../img/lightLogo.png" alt="로고" id="mainImg">
+            <h1 id="mainH1">새롭게 오신 것을 환영합니다.</h1>
+
+            <!--서브문구-->
+            <p id="mainIntro">몇 번의 클릭으로 Logg에 가입할 수 있습니다.</p>
+        </div>
+
+        <div id="information">
+            <!--입력-->
+            <input class="longInput" id="id" name="id" placeholder="Logg 아이디"><br>
+
+            <input class="shortInput" type="password" id="password" name="password" placeholder="비밀번호">
+            <input class="shortInput" type="password" id="passwordAgain" placeholder="비밀번호 재입력"><br>
+
+            <!--약관 동의-->
+            <p id="policyText"><input type="radio" id="policy"name="policy">Logg의 약관에 동의합니다. <a href="../policy" style="color: #006aff" target="_blank">약관 확인하기</a></p>
+
+            <!--확인-->
+            <input type="button" id="submit" value="가입하기" onclick="submit()">
+        </div>
+
+        <!--Popup-->
+        <div id="popup" style="opacity: 0;">
+            <p id="popupText">값이 표시됩니다.</p>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='api.js') }}"
+    <script src="{{ url_for('static', filename='signup/index.js') }}"></script>
+</html>
