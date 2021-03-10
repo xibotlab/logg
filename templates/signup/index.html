@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="mainDiv">
-            <img src="../img/lightLogo.png" alt="로고" id="mainImg">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="로고" id="mainImg">
             <h1 id="mainH1">새롭게 오신 것을 환영합니다.</h1>
 
             <!--서브문구-->
@@ -40,6 +40,6 @@
             <p id="popupText">값이 표시됩니다.</p>
         </div>
     </body>
-    <script src="{{ url_for('static', filename='api.js') }}"
+    <!--<script src="{{ url_for('static', filename='api.js') }}"></script>-->
     <script src="{{ url_for('static', filename='signup/index.js') }}"></script>
 </html>
