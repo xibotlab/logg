@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import pymysql
 
 app = Flask(__name__)
 
@@ -7,8 +8,13 @@ app = Flask(__name__)
 def signup():
     return render_template("signup/index.html")
 
-#@app.route("/signup/upload")
-#def 
+@app.route("/signup/upload")
+def signup_upload():
+    #load db password
+    with open("dbpw.txt", "r") as f:
+        dbpw = f.read()
+
+    return dbpw
 
 #debug mode
 if __name__ == "__main__":
